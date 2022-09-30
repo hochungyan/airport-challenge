@@ -10,7 +10,11 @@ constructor(capacity)
 }
 land = plane =>
 {
-    if(this.planesAtAirport.includes(plane))
+    if(isFull)
+    {
+
+    }
+    else if(this.planesAtAirport.includes(plane))
     {
         return "This plane is already landed at the airport"
     }
@@ -25,7 +29,10 @@ setCapacity(newCapacity) {
     this.capacity=newCapacity;
 
 }
-
+isFull()
+{
+    return this.planesAtAirport.length >= this.capacity;
+}
 
 }
 

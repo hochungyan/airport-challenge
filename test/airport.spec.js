@@ -38,3 +38,21 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
     // verify
       test.assertEquals(result, expected);
     });
+
+    // Test 3 - Check is the airport full or not
+   console.log(`============================`);
+   console.log(`Test 3 - Airport#land()`);
+   
+   //
+   test.it('plane cannot land if airport is full', function() {
+       // setup
+       let airport = new Airport();
+       let airplane1 =new Airplane(1);
+       airport.land(airplane1);
+       airport.land(airplane1);
+       expected = "Sorry, The airport is full";
+        // execute
+       result= airport.land(airplane1);      
+       // verify
+         test.assertEquals(result, expected);
+       });
