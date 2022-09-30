@@ -3,7 +3,7 @@ class Airport {
 capacity;
 planesAtAirport;
 
-constructor()
+constructor(capacity)
 {
     this.capacity = 2;
     this.planesAtAirport = [];
@@ -18,6 +18,12 @@ land = plane =>
         this.planesAtAirport.push(plane);
         return this.planesAtAirport;
     }
+
+}
+setCapacity(newCapacity) {
+
+    this.capacity=newCapacity;
+
 }
 
 

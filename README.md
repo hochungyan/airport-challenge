@@ -57,9 +57,9 @@ So that the software can be used for many different airports
 I would like a default airport capacity that can be overridden as appropriate
 
 ```
-| Object | Properties                     | Message          | Output   |
-| ------ | ----------------------         | ----------       | ------   |
-| Airport | capacity[@2] | setCapacity(newCapacity @integer) | @void    |
+| Object | Properties                     | Message                           | Output   |
+| ------ | ----------------------         | ----------                        | ------   |
+| Airport | capacity[@2]                  | setCapacity(newCapacity @integer) | @void    |
 
 1. We set the inital Airport capacity to be 2 then we change it if required
 

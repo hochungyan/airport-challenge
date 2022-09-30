@@ -28,11 +28,11 @@ test.it('cannot landed if the plane is already in the airport', function() {
 console.log(`Test 2 - New Airport()`);
 
 //
-test.it('cannot landed if the plane is already in the airport', function() {
+test.it('Capacity of the Airport can be adjusted if required', function() {
     // setup
-    let airport = new Airport(3);
+    let airport = new Airport();
     expected = 3;
-   
+   airport.setCapacity(3);
     // execute
       result = airport.capacity
     // verify
