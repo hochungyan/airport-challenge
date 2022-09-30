@@ -16,7 +16,7 @@ land = plane =>
     }
     else if(this.planesAtAirport.includes(plane))
     {
-        return "This plane is already landed at the airport"
+        return "This plane is already at the airport"
     }
     else {
         this.planesAtAirport.push(plane);

@@ -104,7 +104,7 @@ Your code should defend against [edge cases](http://programmers.stackexchange.co
 ## Domain Model
 |  Object  |  Properties  |  Message   | Context  | Output        | Done?
 |----------|--------------|------------|----------|---------------|--------
-| Airport   | planesAtAirport @Array[planes] | land(plane) | plane already landed | @String "This plane is already landed at the airport" |  ✅   
+| Airport   | planesAtAirport @Array[planes] | land(plane) | confirm plane is landed | Boolean @true |  ✅   
 | | capacity[@2] initial | setCapacity(newCapacity @integer) | Can the Airport capacity be changed | Boolean @true | ✅  
 | | |  | is full | @String "Sorry, The airport is full" | ✅ 
 | | | isFull() | is full | Boolean @true | ✅ 

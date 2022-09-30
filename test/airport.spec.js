@@ -11,16 +11,15 @@ console.log(`============================`);
 console.log(`Test 1 - Airport#land()`);
 
 //
-test.it('cannot landed if the plane is already in the airport', function() {
+test.it('Instruct the plane to land then Check whether the plane is landed or not', function() {
     // setup
     let airport = new Airport();
     let airplane1 = new Airplane(1);
-    expected = 'This plane is already landed at the airport';
     airport.land(airplane1);
     // execute
-   result = airport.land(airplane1);
+   result = airport.planesAtAirport.includes(airplane1);
     // verify
-      test.assertEquals(result, "This plane is already landed at the airport");
+      test.assertEquals(result, true);
     });
 
    // Test 2 - Able to change the capacity of the Airport
@@ -49,7 +48,7 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        let airport = new Airport();
        let airplane1 =new Airplane(1);
        let airplane2 =new Airplane(2);
-       let airplane3 =new Airplane(2);
+       let airplane3 =new Airplane(3);
        airport.land(airplane1);
        airport.land(airplane2);
        expected = "Sorry, The airport is full";
