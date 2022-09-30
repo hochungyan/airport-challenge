@@ -67,9 +67,10 @@ Test 3
 As an air traffic controller
 To ensure safety
 I want to prevent landing when the airport is full
-| Object  | Properties                    | Message                           | Output   |
-| ------  | ----------------------        | ----------                        | ------   |
-| Airport | capacity[@2] constant/final   | IfAirportIsFull()                   | @boolean |
+| Object  | Properties                    | Message           | Output   |
+| ------  | ----------------------        | ----------        | ------   |
+| Airport | capacity[@2] constant/final   | IsFull()          | @boolean |
+|         |                               |                   | @string  |
 As an air traffic controller
 So I can get passengers on the way to their destination
 I want to instruct the airport to let a plane take off and confirm that it is no longer in the airport
@@ -101,5 +102,7 @@ Your code should defend against [edge cases](http://programmers.stackexchange.co
 ## Domain Model
 |  Object  |  Properties  |  Message   | Context  | Output        | Done?
 |----------|--------------|------------|----------|---------------|--------
-| Airport   | planesAtAirport @Array[planes] | land(plane) | plane already landed | @String"This plane is already landed at the airport" |  ✅   
+| Airport   | planesAtAirport @Array[planes] | land(plane) | plane already landed | @String "This plane is already landed at the airport" |  ✅   
 | | capacity[@2] initial | setCapacity(newCapacity @integer) | Can the Airport capacity be changed | Boolean @true | ✅  
+| | |  | is full | @String "Sorry, The airport is full" |
+| | | isFull() | is full | Boolean @true |
