@@ -51,7 +51,7 @@ I want to instruct the airport to land a plane
 
 1. Test that plane is added to the array, in this case the array would be planesAtAirport instead of basketList, we can put a if else statement in the Land method for the include and return the string if the plane is already landed at the airport
 ```
-
+Test 2
 As the system designer
 So that the software can be used for many different airports
 I would like a default airport capacity that can be overridden as appropriate
@@ -61,7 +61,7 @@ I would like a default airport capacity that can be overridden as appropriate
 | ------ | ----------------------         | ----------       | ------   |
 | Airport | capacity[@2] | setCapacity(newCapacity @integer) | @void    |
 
-
+1. We set the inital Airport capacity to be 2 then we change it if required
 
 
 
