@@ -48,11 +48,13 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        // setup
        let airport = new Airport();
        let airplane1 =new Airplane(1);
+       let airplane2 =new Airplane(2);
+       let airplane3 =new Airplane(2);
        airport.land(airplane1);
-       airport.land(airplane1);
+       airport.land(airplane2);
        expected = "Sorry, The airport is full";
         // execute
-       result= airport.land(airplane1);      
+       result= airport.land(airplane3);      
        // verify
          test.assertEquals(result, expected);
        });

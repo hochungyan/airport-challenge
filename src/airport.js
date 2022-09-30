@@ -10,9 +10,9 @@ constructor(capacity)
 }
 land = plane =>
 {
-    if(isFull)
+    if(this.isFull())
     {
-
+      return "Sorry, The airport is full"
     }
     else if(this.planesAtAirport.includes(plane))
     {
