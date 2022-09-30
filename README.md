@@ -47,7 +47,7 @@ I want to instruct the airport to land a plane
 ```
 | Object | Properties                     | Message      | Output   |
 | ------ | ----------------------         | ----------   | ------   |
-| Airport | planesAtAirport@Array[@plane] | land(@plane) | @void    |
+| Airport | planesAtAirport@Array[@plane] | land(@airplane) | @void    |
 | | | checkIfPlaneIsLanded | @boolean    |
 1. Test that plane is added to the array, in this case the array would be planesAtAirport instead of basketList, we can put a if else statement in the Land method for the include and return the string if the plane is already landed at the airport
 ```
@@ -70,17 +70,18 @@ I want to prevent landing when the airport is full
 ```
 | Object  | Properties                    | Message           | Output   |
 | ------  | ----------------------        | ----------        | ------   |
-| Airport | planes@Array   |          | @boolean |
+| Airport | planes@Array   |              | @boolean |
 |         |                               |                   | @string  |
 ```
+Test 4
 As an air traffic controller
 So I can get passengers on the way to their destination
 I want to instruct the airport to let a plane take off and confirm that it is no longer in the airport
 ```
 | Object  | Properties                    | Message           | Output   |
 | ------  | ----------------------        | ----------        | ------   |
-| Airport | planesAtAirport@Array[@plane] | IsFull()          | @boolean |
-|         |                               |                   | @string  |
+| Airport | planesAtAirport@Array[@plane] | takeOff(@airplane)| @void    |
+|         |                               | CheckisAirplaneNoLongerAtAirport | @boolean  |
 ```
 
 As an air traffic controller
