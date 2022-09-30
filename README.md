@@ -40,9 +40,17 @@ We have a request from a client to write the software to control the flow of pla
 
 #### Acceptance Criteria
 ```
+Test 1
 As an air traffic controller
 So I can get passengers to a destination
 I want to instruct the airport to land a plane
+```
+| Object | Properties                     | Message      | Output   |
+| ------ | ----------------------         | ----------   | ------   |
+| Airport | planesAtAirport@array[@plane] | Land(@plane) | @string  |
+
+1. Test that plane is added to the array, in this case the array would be planesAtAirport instead of basketList, we can put a if else statement in the Land method for the include and return the string if the plane is already landed at the airport
+```
 
 As the system designer
 So that the software can be used for many different airports
