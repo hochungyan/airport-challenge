@@ -57,3 +57,23 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        // verify
          test.assertEquals(result, expected);
        });
+
+
+  // Test 4 - Instruct the plane to takeoff then check is it still at the airport
+   console.log(`============================`);
+   console.log(`Test 4 - Airport#takeOff()`);
+   
+   //
+   test.it('plane is not longer at the airport', function() {
+       // setup
+       let airport = new Airport();
+       let airplane1 =new Airplane(1);
+      
+       airport.land(airplane1);
+       result=airport.takeOff(airplane1);  
+       expected ="Plane is no longer at the airport"
+        // execute
+       //result= airport.takeOff(airplane1);      
+       // verify
+         test.assertEquals(result, expected);
+       });

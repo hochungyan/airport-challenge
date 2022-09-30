@@ -9,21 +9,32 @@ constructor(capacity)
     this.capacity = 2;
     this.planesAtAirport = [];
    }
-    land = plane =>
+    land = airplane =>
     {
     if(this.isFull())
     {
       return "Sorry, The airport is full"
     }
-    else if(this.planesAtAirport.includes(plane))
+    else if(this.planesAtAirport.includes(airplane))
     {
         return "This plane is already at the airport"
     }
     else {
-        this.planesAtAirport.push(plane);
+        this.planesAtAirport.push(airplane);
         return this.planesAtAirport;
     };
-
+   
+   }
+   takeOff = airplane =>
+   {
+       if(this.planesAtAirport.includes(airplane))
+       {
+            return this.planesAtAirport.pop(airplane);
+       }
+       else
+       {
+            return "Plane is no longer at the airport";
+       };
    }
 setCapacity(newCapacity) {
 
