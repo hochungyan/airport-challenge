@@ -24,4 +24,4 @@ airport.land(airplane1);
 //Adding the same plane again and expect it to return an error message
 actual = airport.land(airplane1);
 result = assertEquals(actual,expected);
-console.log(result);
+console.log(`Plane can not landed again if it is already in the airport: ${result}`);
