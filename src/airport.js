@@ -1,5 +1,6 @@
 class Airport {
     // here's a starting point for you
+ 
 capacity;
 planesAtAirport;
 
@@ -7,9 +8,9 @@ constructor(capacity)
 {
     this.capacity = 2;
     this.planesAtAirport = [];
-}
-land = plane =>
-{
+   }
+    land = plane =>
+    {
     if(this.isFull())
     {
       return "Sorry, The airport is full"
@@ -21,19 +22,17 @@ land = plane =>
     else {
         this.planesAtAirport.push(plane);
         return this.planesAtAirport;
-    }
+    };
 
-}
+   }
 setCapacity(newCapacity) {
 
     this.capacity=newCapacity;
 
-}
-isFull()
-{
+   }
+   isFull(){
     return this.planesAtAirport.length >= this.capacity;
-}
-
+   }
 }
 
 module.exports = Airport;

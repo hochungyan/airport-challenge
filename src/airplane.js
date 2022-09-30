@@ -1,9 +1,9 @@
 class Airplane {
     constructor(id) {
-      this.id = id;
+        this.id = id;
       
     }
-  }
+}
   
-  module.exports = Airplane;
+module.exports = Airplane;
   

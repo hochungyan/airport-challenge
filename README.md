@@ -47,8 +47,8 @@ I want to instruct the airport to land a plane
 ```
 | Object | Properties                     | Message      | Output   |
 | ------ | ----------------------         | ----------   | ------   |
-| Airport | planesAtAirport@array[@plane] | land(@plane) | @string  |
-
+| Airport | planesAtAirport@Array[@plane] | land(@plane) | @void    |
+| | | checkIfPlaneIsLanded | @boolean    |
 1. Test that plane is added to the array, in this case the array would be planesAtAirport instead of basketList, we can put a if else statement in the Land method for the include and return the string if the plane is already landed at the airport
 ```
 Test 2
@@ -70,12 +70,18 @@ I want to prevent landing when the airport is full
 ```
 | Object  | Properties                    | Message           | Output   |
 | ------  | ----------------------        | ----------        | ------   |
-| Airport | capacity[@2] constant/final   | IsFull()          | @boolean |
+| Airport | planes@Array   |          | @boolean |
 |         |                               |                   | @string  |
 ```
 As an air traffic controller
 So I can get passengers on the way to their destination
 I want to instruct the airport to let a plane take off and confirm that it is no longer in the airport
+```
+| Object  | Properties                    | Message           | Output   |
+| ------  | ----------------------        | ----------        | ------   |
+| Airport | planesAtAirport@Array[@plane] | IsFull()          | @boolean |
+|         |                               |                   | @string  |
+```
 
 As an air traffic controller
 To avoid confusion
@@ -104,7 +110,8 @@ Your code should defend against [edge cases](http://programmers.stackexchange.co
 ## Domain Model
 |  Object  |  Properties  |  Message   | Context  | Output        | Done?
 |----------|--------------|------------|----------|---------------|--------
-| Airport   | planesAtAirport @Array[planes] | land(plane) | confirm plane is landed | Boolean @true |  ✅   
+| Airport   | planesAtAirport @Array[planes] | land(plane) | not full | void |  ✅ 
+| | | | confirm plane is landed | Boolean @true |  ✅   
 | | capacity[@2] initial | setCapacity(newCapacity @integer) | Can the Airport capacity be changed | Boolean @true | ✅  
 | | |  | is full | @String "Sorry, The airport is full" | ✅ 
 | | | isFull() | is full | Boolean @true | ✅ 
