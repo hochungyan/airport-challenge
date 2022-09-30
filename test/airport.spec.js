@@ -68,12 +68,11 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        // setup
        let airport = new Airport();
        let airplane1 =new Airplane(1);
-      
        airport.land(airplane1);
-       result=airport.takeOff(airplane1);  
+       airport.takeOff(airplane1);  
        expected ="Plane is no longer at the airport"
         // execute
-       //result= airport.takeOff(airplane1);      
+       result= airport.takeOff(airplane1);      
        // verify
          test.assertEquals(result, expected);
        });
