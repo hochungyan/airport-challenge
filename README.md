@@ -111,8 +111,11 @@ Your code should defend against [edge cases](http://programmers.stackexchange.co
 ## Domain Model
 |  Object  |  Properties  |  Message   | Context  | Output        | Done?
 |----------|--------------|------------|----------|---------------|--------
-| Airport   | planesAtAirport @Array[planes] | land(plane) | not full | void |  ✅ 
+| Airport   | planesAtAirport @Array[planes] | land(plane) | not full | @void |  ✅ 
 | | | | confirm plane is landed | Boolean @true |  ✅   
 | | capacity[@2] initial | setCapacity(newCapacity @integer) | Can the Airport capacity be changed | Boolean @true | ✅  
 | | |  | is full | @String "Sorry, The airport is full" | ✅ 
 | | | isFull() | is full | Boolean @true | ✅ 
+| | planesAtAirport@Array[@planes]| takeOff(@airplane)| not empty | @void |
+| | |  | is full | @String "Plane is no longer at the airport" | ✅ 
+| | | |CheckisAirplaneNoLongerAtAirport | Boolean @true |✅
