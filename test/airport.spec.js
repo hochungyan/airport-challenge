@@ -17,7 +17,7 @@ test.it('Instruct the plane to land then Check whether the plane is landed or no
     let airplane1 = new Airplane(1);
     airport.land(airplane1);
     // execute
-   result = airport.planesAtAirport.includes(airplane1);
+   result = airport.planesAtAirport.includes((airplane1));
     // verify
       test.assertEquals(result, true);
     });
@@ -64,7 +64,7 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
    console.log(`Test 4 - Airport#takeOff()`);
    
    //
-   test.it('plane is not longer at the airport', function() {
+   test.it('Check whether the plane still at the airport after instruct it to takeoff', function() {
        // setup
        let airport = new Airport();
        let airplane1 =new Airplane(1);
@@ -76,3 +76,5 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        // verify
          test.assertEquals(result, expected);
        });
+
+    // Test 5

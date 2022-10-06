@@ -4,9 +4,9 @@ class Airport {
 capacity;
 planesAtAirport;
 
-constructor(capacity)
+constructor(capacity=2)
 {
-    this.capacity = 2;
+    this.capacity = capacity;
     this.planesAtAirport = [];
    }
     land = airplane =>

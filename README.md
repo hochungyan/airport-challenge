@@ -61,7 +61,7 @@ I would like a default airport capacity that can be overridden as appropriate
 | ------ | ----------------------         | ----------                        | ------   |
 | Airport | capacity[@2]                  | setCapacity(newCapacity @integer) | @void    |
 
-1. We set the inital Airport capacity to be 2 then we change it if required
+1. We set the inital Airport capacity to be 2 then we change the capacity to 3 and use the method assert.equal to check is it true or not.
 ```
 Test 3
 As an air traffic controller
@@ -70,8 +70,9 @@ I want to prevent landing when the airport is full
 ```
 | Object  | Properties                    | Message           | Output   |
 | ------  | ----------------------        | ----------        | ------   |
-| Airport | planes@Array   |              | @boolean |
+| Airport | planes@Array   |              | @boolean          |          |
 |         |                               |                   | @string  |
+1. The capacity of the airport is 2. so when we land the third plane into the airport. We can use if else method to return a string "Sorry, The airport is full".
 ```
 Test 4
 As an air traffic controller
@@ -82,13 +83,16 @@ I want to instruct the airport to let a plane take off and confirm that it is no
 | ------  | ----------------------        | ----------        | ------   |
 | Airport | planesAtAirport@Array[@plane] | takeOff(@airplane)| @void    |
 |         |                               | CheckisAirplaneNoLongerAtAirport | @boolean  |
+1. First we land a plane then instruct it to take off then we can check whether the plane is still in the planesAtAiport array by having a if else statement in the takeoff method. it should return a string "Plane is no longer at the airport" then we can use assert.equal to check is the return string same as the expected string. 
 ```
-
+Test 5
 As an air traffic controller
 To avoid confusion
 I want to prevent asking the airport to let planes take-off which are not at the airport, or land a plane that's already landed
 ```
+| Object  | Properties                    | Message           | Output   |
 
+1. we will need to write 2 tests here. One to prevent the airport to let planes takeoff which are not at the airport and the second test will check is the plane already landed
 #### Extended Acceptance Criteria
 ```
 As an air traffic controller
