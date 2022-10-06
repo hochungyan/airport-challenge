@@ -70,11 +70,38 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        let airplane1 =new Airplane(1);
        airport.land(airplane1);
        airport.takeOff(airplane1);  
-       expected ="Plane is no longer at the airport"
+       //expected ="Plane is no longer at the airport"
         // execute
        result= airport.takeOff(airplane1);      
        // verify
-         test.assertEquals(result, expected);
+         test.assertEquals(result.includes(airplane1), false);
        });
 
-    // Test 5
+    // Test 5A
+    test.it('Prevent airplane to take off when it is no longer at the airport', function() {
+      // setup
+      let airport = new Airport();
+      let airplane1 = new Airplane();
+      airport.land(airplane1);
+      airport.takeOff(airplane1);  
+      result = 
+      expected ="Plane is no longer at the airport"
+       // execute
+      result= airport.takeOff(airplane1);      
+      // verify
+        test.assertEquals(result, expected);
+        //I feel like test 4 and Test 5A can be the same test. However, I will change Test 4 just to make it different
+      });
+      // Test 5B
+      test.it('Check whether the plane still at the airport after instruct it to takeoff', function() {
+        // setup
+        let airport = new Airport();
+        let airplane1 =new Airplane(1);
+        airport.land(airplane1);
+        airport.takeOff(airplane1);  
+        expected ="Plane is no longer at the airport"
+         // execute
+        result= airport.takeOff(airplane1);      
+        // verify
+          test.assertEquals(result, expected);
+        });

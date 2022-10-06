@@ -84,6 +84,7 @@ I want to instruct the airport to let a plane take off and confirm that it is no
 | Airport | planesAtAirport@Array[@plane] | takeOff(@airplane)| @void    |
 |         |                               | CheckisAirplaneNoLongerAtAirport | @boolean  |
 1. First we land a plane then instruct it to take off then we can check whether the plane is still in the planesAtAiport array by having a if else statement in the takeoff method. it should return a string "Plane is no longer at the airport" then we can use assert.equal to check is the return string same as the expected string. 
+2. I have changed it slightly. Instead I will use test.assertEquals(result.includes(Plane), false) instead;
 ```
 Test 5
 As an air traffic controller
@@ -93,6 +94,7 @@ I want to prevent asking the airport to let planes take-off which are not at the
 | Object  | Properties                    | Message           | Output   |
 
 1. we will need to write 2 tests here. One to prevent the airport to let planes takeoff which are not at the airport and the second test will check is the plane already landed
+2. I feel like Test 4 and Test 5A can be the same Test. However, I will change Test 4 slightly so it wont be the same.
 #### Extended Acceptance Criteria
 ```
 As an air traffic controller
