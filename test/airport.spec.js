@@ -102,7 +102,7 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
         let airplane1 =new Airplane(1);
         airport.land(airplane1);
         result =airport.land(airplane1);  
-        expected ="Plane is at the airport"
+        expected ="This plane is already at the airport"
          // execute
              
         // verify
