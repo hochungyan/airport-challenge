@@ -78,6 +78,9 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
        });
 
     // Test 5A
+    console.log(`============================`);
+   console.log(`Test 5 - Prevent airplane to take off twice or land twice`);
+   
     test.it('Prevent airplane to take off when it is no longer at the airport', function() {
       // setup
       let airport = new Airport();
@@ -93,15 +96,15 @@ test.it('Capacity of the Airport can be adjusted if required', function() {
         //I feel like test 4 and Test 5A can be the same test. However, I will change Test 4 just to make it different
       });
       // Test 5B
-      test.it('Check whether the plane still at the airport after instruct it to takeoff', function() {
+      test.it('Prevent a plane to land again if it is already at the airport', function() {
         // setup
         let airport = new Airport();
         let airplane1 =new Airplane(1);
         airport.land(airplane1);
-        airport.takeOff(airplane1);  
-        expected ="Plane is no longer at the airport"
+        result =airport.land(airplane1);  
+        expected ="Plane is at the airport"
          // execute
-        result= airport.takeOff(airplane1);      
+             
         // verify
           test.assertEquals(result, expected);
         });
