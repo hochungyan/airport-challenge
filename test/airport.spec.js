@@ -17,9 +17,11 @@ test.it('Instruct the plane to land then Check whether the plane is landed or no
     let airplane1 = new Airplane(1);
     airport.land(airplane1);
     // execute
-   result = airport.planesAtAirport.includes((airplane1));
+   //result = airport.planesAtAirport.includes((airplane1));
+   result = airport.planesAtAirport.length
+   expected = 1;
     // verify
-      test.assertEquals(result, true);
+      test.assertEquals(result, 1);
     });
 
    // Test 2 - Able to change the capacity of the Airport
