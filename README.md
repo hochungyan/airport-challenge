@@ -17,6 +17,8 @@ This project is completed around 2nd week of our training.
 •Project Review and Roadmap
 The main takeaways from this project is to use Github in a professional manner, learning how to write user story and unit test and gain a deeper understanding in js when we create different classes and constructors. If I can re-do the Project again, I probably would have use jasmine testing framework to write unit Test and also finish off the extended Acceptance Criteria.
 ```
+```
+==============================================================
          ______
         __\____\___
 =  = ==(____DFA____)
