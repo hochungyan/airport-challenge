@@ -1,6 +1,21 @@
 Airport Challenge
 =================
+```
+• About the Project
+This project helps us to build up understanding for different concepts, such as Domain Modelling, Testing, Testing Frameworks, Test Driven Development and we continue to develop our javascript skills. 
+This project is completed around 2nd week of our training.
 
+•Built With
+-Using Github 
+-Javascript
+-Domain model
+-User story
+
+•Problem Statements
+-We have a request from a client to write the software to control the flow of planes at an airport. The planes can land and take off provided that the weather is sunny. Occasionally it may be stormy, in which case no planes can land or take off.  
+
+•Project Review and Roadmap
+The main takeaways from this project is to use Github in a professional manner, learning how to write user story and unit test and gain a deeper understanding in js when we create different classes and constructors. If I can re-do the Project again, I probably would have use jasmine testing framework to write unit Test and also finish off the extended Acceptance Criteria.
 ```
          ______
         __\____\___
@@ -32,7 +47,7 @@ Steps
 3. Convert stories into a representative domain model and test-drive your work.
 4. Run your tests using `npm test` or `node specRunner.js`
 5. OPTIONAL: [Lint](https://eslint.org/docs/user-guide/getting-started) your source code using `npx eslint src`.
-
+•Problem Statements
 Task
 -----
 
@@ -49,7 +64,7 @@ I want to instruct the airport to land a plane
 | ------ | ----------------------         | ----------   | ------   |
 | Airport | planesAtAirport@Array[@plane] | land(@airplane) | @void    |
 | | | checkIfPlaneIsLanded | @boolean    |
-1. There are 2 ways to solve this test. We can either use inlcude to check is the plane in the array or use airport.planesAtAirport.includes((airplane1)) or airport.planesAtAirport.length. However, using the length method is better in this case because the plane might already exist in the array before we use this code, ie: a very old plane which is in the airport for years.
+1. There are 2 ways to solve this test. We can either use inlcude to check is the plane in the array which is airport.planesAtAirport.includes((airplane1)) or airport.planesAtAirport.length. However, using the length method is better in this case because the plane might already exist in the array before we use this code, ie: a very old plane which is in the airport for years.
 ```
 Test 2
 As the system designer
