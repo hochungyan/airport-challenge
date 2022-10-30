@@ -1,5 +1,10 @@
 Airport Challenge
 =================
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=hochungyan_airport-challenge&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=hochungyan_airport-challenge)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=hochungyan_airport-challenge&metric=bugs)](https://sonarcloud.io/summary/new_code?id=hochungyan_airport-challenge)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=hochungyan_airport-challenge&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=hochungyan_airport-challenge)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=hochungyan_airport-challenge&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=hochungyan_airport-challenge)
+=================
 ```
 • About the Project
 This project helps us to build up understanding for different concepts, such as Domain Modelling, Testing, Testing Frameworks, Test Driven Development and we continue to develop our javascript skills. 
